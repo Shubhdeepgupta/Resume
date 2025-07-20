@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Shubhdeep Gupta</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Shubhdeep Gupta</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section_pic-container">
+            <img src="./images/ProfilePhoto2.JPG" alt="Shubhdeep Gupta Profile Picture">
+        </div>
+        <div class="section_text">
+            <p class="section_text_p1">Hello I'm</p>
+            <h1 class="title">Shubhdeep Gupta</h1>
+            <p class="section_text_p2">Full Stack Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./images/ShubhdeepGupta.pdf')">Download Resume</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./images/linkedin.png" alt="My linkedin Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/shubhdeepgupta'">
+                <img src="./images/github.png" alt="My Github Profile" class="icon" onclick="location.href='https://github.com/Shubhdeepgupta'">
+
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section_text_p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section_pic-container">
+                <img src="./images/img.png" alt="Profile picture" class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-container">
+                    <div class="details-container">
+                        <img src="./images/experience.png" alt="Experience icon" class="icon">
+                        <h3>Experience</h3>
+                        <p>1+ Year <br/>Associate Engineer at Avaya India Pvt Ltd</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./images/education.png" alt="Experience icon" class="icon">
+                        <h3>Education</h3>
+                        <p>Master in Computer Application Specialization(Artificial Intelligence & Machine Learning) <br/></p>
+                    </div>
+                </div>
+                <div class="text-container">
+                      <p>As a results-driven Software Engineer, I engineer scalable, high-performance applications using Java, Spring Boot, and Python. I excel at optimizing systems through in-depth Linux expertise, proactive log analysis, and advanced debugging. With a solid foundation in frontend technologies like HTML and CSS, I seamlessly bridge backend and UI layers to craft full-stack solutions. Actively building a strong DevOps foundation with hands-on tools, real-world use cases, and continuous learning in cloud-native environments.</p>
+                </div>
+            </div>
+        </div>
+        <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
+    </section>
+    <section id="experience">
+        <p class="section_text_p1">Explore My</p>
+        <h1 class="title">Skills </h1>
+        <div class="experience-details-container">
+            <div class="about-container">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Programming</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Java</h3>
+                                <p>OOPs, Backend development</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Python</h3>
+                                <p>Automation, tooling, scripts</p>
+                            </div>
+                        </article>
+          
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>MySQL</h3>
+                                <p>Writing queries, Data management</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>SpringBoot</h3>
+                                <p>REST APIs and microservices</p>
+                            </div>
+                        </article>
+        
+                    </div>
+                </div>
+                                 <div class="details-container">
+                    <h2 class="experience-sub-title">DevOps & Cloud</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Docker</h3>
+                                <p>Containerization, Image management</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Kubernetes</h3>
+                                <p>Orchestration, rollouts, scaling</p>
+                            </div>
+                        </article>
+          
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Jenkins/GitLab</h3>
+                                <p>CI/CD & automated deployments</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>AWS Cloud</h3>
+                                <p>Deployment, scaling & monitoring
+
+</p>
+                            </div>
+                        </article>
+        
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Systems & Platform</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Linux</h3>
+                                <p>CLI, system navigation, permissions</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Networking</h3>
+                                <p>TCP/IP, DNS, firewalls, HTTP basics</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Virtualization</h3>
+                                <p>VMware, vCloud management</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Monitoring Systems</h3>
+                                <p>Health check, log parsing
+
+</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
+    </section>
+    <section id="projects">
+        <p class="section_text_p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-container">
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./images/project1.png" alt="Project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">React+Bootstrap Website</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Shubhdeepgupta/react-first-project'">Github</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='http://localhost:3000/'">Live Demo</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./images/project2.png" alt="Project 2" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Food Ordering Website</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Shubhdeepgupta/Food-Ordering-Website'">Github</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://shubhdeepgupta.github.io/Food-Ordering-Website/'">Live Demo</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./images/AI_trainer3.png" alt="Project 3" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Health Fitness AI Trainer</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Shubhdeepgupta/Health-Fitness-AI-Trainer'">Github</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Shubhdeepgupta/Health-Fitness-AI-Trainer'">Live Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
+    </section>
+    <section id="contact">
+        <p class="section_text_p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./images/email.png" alt="Email icon" class="icon contact-icon email-icon">
+                <p><a href="mailto:exampleemail@gmail.com">Shubhdeepgupta06gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./images/linkedin.png" alt="linkedin icon" class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/shubhdeep-gupta-41754524a/">Linkedin</a></p>
+            </div>
+        </div>            
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2023 Shubhdeep Gupta. All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
