@@ -6,10 +6,19 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
+    <div id="loader"></div>
     <nav id="desktop-nav">
         <div class="logo">Shubhdeep Gupta</div>
+        
+        <!-- Dark Mode Toggle Button -->
+         <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+            <img id="theme-icon" src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Toggle Theme" />
+        </div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -19,6 +28,7 @@
             </ul>
         </div>
     </nav>
+
     <nav id="hamburger-nav">
         <div class="logo">Shubhdeep Gupta</div>
         <div class="hamburger-menu">
@@ -36,15 +46,19 @@
         </div>
     </nav>
     <section id="profile">
-        <div class="section_pic-container">
+        <div class="section_pic-container" data-aos="fade-right" data-aos-delay="100">
+
             <img src="./images/ProfilePhoto2.JPG" alt="Shubhdeep Gupta Profile Picture">
         </div>
         <div class="section_text">
-            <p class="section_text_p1">Hello I'm</p>
-            <h1 class="title">Shubhdeep Gupta</h1>
-            <p class="section_text_p2">Full Stack Developer</p>
+            <div class="section_text_typing">
+                <p class="section_text_p1">Hello I'm</p>
+                <h1 class="title">Shubhdeep Gupta</h1>
+                <p class="section_text_p2"><span class="typed-text"></span><span class="cursor">|</span></p>
+            </div>
+
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./images/ShubhdeepGupta.pdf')">Download Resume</button>
+                <button class="btn btn-color-2" onclick="openModal()">View Resume</button>
                 <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
             </div>
             <div id="socials-container">
@@ -54,14 +68,15 @@
             </div>
         </div>
     </section>
-    <section id="about">
+
+    <section id="about" data-aos="fade-up">
         <p class="section_text_p1">Get To Know More</p>
         <h1 class="title">About Me</h1>
         <div class="section-container">
-            <div class="section_pic-container">
+            <div class="section_pic-container" data-aos="fade-right" data-aos-delay="100">
                 <img src="./images/img.png" alt="Profile picture" class="about-pic">
             </div>
-            <div class="about-details-container">
+            <div class="about-details-container" data-aos="fade-left" data-aos-delay="200">
                 <div class="about-container">
                     <div class="details-container">
                         <img src="./images/experience.png" alt="Experience icon" class="icon">
@@ -74,131 +89,163 @@
                         <p>Master in Computer Application Specialization(Artificial Intelligence & Machine Learning) <br/></p>
                     </div>
                 </div>
-                <div class="text-container">
+                <div class="text-container" data-aos="fade-up" data-aos-delay="300">
                       <p>As a results-driven Software Engineer, I engineer scalable, high-performance applications using Java, Spring Boot, and Python. I excel at optimizing systems through in-depth Linux expertise, proactive log analysis, and advanced debugging. With a solid foundation in frontend technologies like HTML and CSS, I seamlessly bridge backend and UI layers to craft full-stack solutions. Actively building a strong DevOps foundation with hands-on tools, real-world use cases, and continuous learning in cloud-native environments.</p>
                 </div>
             </div>
         </div>
         <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
     </section>
-    <section id="experience">
-        <p class="section_text_p1">Explore My</p>
-        <h1 class="title">Skills </h1>
-        <div class="experience-details-container">
-            <div class="about-container">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Programming</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Java</h3>
-                                <p>OOPs, Backend development</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Python</h3>
-                                <p>Automation, tooling, scripts</p>
-                            </div>
-                        </article>
-          
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>MySQL</h3>
-                                <p>Writing queries, Data management</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>SpringBoot</h3>
-                                <p>REST APIs and microservices</p>
-                            </div>
-                        </article>
-        
-                    </div>
-                </div>
-                                 <div class="details-container">
-                    <h2 class="experience-sub-title">DevOps & Cloud</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Docker</h3>
-                                <p>Containerization, Image management</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Kubernetes</h3>
-                                <p>Orchestration, rollouts, scaling</p>
-                            </div>
-                        </article>
-          
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Jenkins/GitLab</h3>
-                                <p>CI/CD & automated deployments</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>AWS Cloud</h3>
-                                <p>Deployment, scaling & monitoring
+    <section id="experience" data-aos="fade-up">
+  <p class="section_text_p1">Explore My</p>
+  <h1 class="title">Skills </h1>
+  <div class="experience-details-container">
+    <div class="about-container">
 
-</p>
-                            </div>
-                        </article>
-        
-                    </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Systems & Platform</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Linux</h3>
-                                <p>CLI, system navigation, permissions</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Networking</h3>
-                                <p>TCP/IP, DNS, firewalls, HTTP basics</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Virtualization</h3>
-                                <p>VMware, vCloud management</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./images/checkmark.png" alt="Experience icon" class="icon"/>
-                            <div>
-                                <h3>Monitoring Systems</h3>
-                                <p>Health check, log parsing
-
-</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
+      <!-- Programming Section -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Programming Language</h2>
+        <div class="article-container">
+          <article data-aos="fade-up" data-aos-delay="100">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>Java</h3>
+              <p>OOPs, Backend development</p>
             </div>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="200">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>Python</h3>
+              <p>Automation, tooling, scripts</p>
+            </div>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="300">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>MySQL</h3>
+              <p>Writing queries, Data management</p>
+            </div>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="400">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>SpringBoot</h3>
+              <p>REST APIs and microservices</p>
+            </div>
+          </article>
         </div>
-        <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
-    </section>
-    <section id="projects">
+      </div>
+
+      <!-- DevOps & Cloud -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">DevOps & Cloud</h2>
+        <div class="article-container">
+          <article data-aos="fade-up" data-aos-delay="100">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>Docker</h3>
+              <p>Containerization, Image management</p>
+            </div>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="200">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>Kubernetes</h3>
+              <p>Orchestration, rollouts, scaling</p>
+            </div>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="300">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>Jenkins/GitLab</h3>
+              <p>CI/CD & automated deployments</p>
+            </div>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="400">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>AWS Cloud</h3>
+              <p>Deployment, scaling & monitoring</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Systems & Platform -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Systems & Platform</h2>
+        <div class="article-container">
+          <article data-aos="fade-up" data-aos-delay="100">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>Linux</h3>
+              <p>CLI, system navigation, permissions</p>
+            </div>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="200">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>Networking</h3>
+              <p>TCP/IP, DNS, firewalls, HTTP basics</p>
+            </div>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="300">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>Virtualization</h3>
+              <p>VMware, vCloud management</p>
+            </div>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="400">
+            <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>Monitoring Systems</h3>
+              <p>Health check, log parsing</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+</section>
+<section id="tech-stack" data-aos="fade-up">
+  <h1 class="title">My Tech Stack</h1>
+  <div class="tech-icons-container">
+    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="100">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+      <p>HTML</p>
+    </div>
+    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="200">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+      <p>CSS</p>
+    </div>
+    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="300">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+      <p>Java</p>
+    </div>
+    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="400">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+      <p>Python</p>
+    </div>
+    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="500">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" />
+      <p>Spring Boot</p>
+    </div>
+    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="600">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+      <p>Linux</p>
+    </div>
+    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="700">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="DevOps" />
+      <p>DevOps</p>
+    </div>
+  </div>
+</section>
+
+    <section id="projects" data-aos="fade-up" data-aos-delay="200">
         <p class="section_text_p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
@@ -237,7 +284,7 @@
         </div>
         <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
     </section>
-    <section id="contact">
+    <section id="contact" data-aos="fade-up" data-aos-delay="300">
         <p class="section_text_p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
@@ -265,5 +312,45 @@
         <p>Copyright &#169; 2023 Shubhdeep Gupta. All Rights Reserved</p>
     </footer>
     <script src="script.js"></script>
+    <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<button onclick="topFunction()" id="topBtn" title="Go to top">⬆</button>
+<a href="https://wa.me/918505998398" class="whatsapp-float" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="Chat on WhatsApp" />
+</a>
+
+<!-- Resume Modal -->
+<div id="resume-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe src="./images/ShubhdeepGupta.pdf" frameborder="0"></iframe>
+    <button class="btn btn-color-1" onclick="window.open('./images/ShubhdeepGupta.pdf')">Download PDF</button>
+  </div>
+</div>
+<!-- Resume Modal -->
+<div id="resumeModal" class="modal">
+  <div class="modal-content" data-aos="zoom-in">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>📄 My Resume</h2>
+    <iframe src="images/resume_edge.pdf" frameborder="0" width="100%" height="500px"></iframe>
+    <div class="modal-buttons">
+      <a href="images/resume_edge.pdf" download class="btn btn-color-2">⬇️ Download</a>
+      <a href="images/resume_edge.pdf" target="_blank" class="btn btn-color-1">🔍 View Fullscreen</a>
+    </div>
+  </div>
+</div>
+<!-- Floating WhatsApp Button -->
+<a
+  href="https://wa.me/918505998398?text=Hi%20Shubhdeep!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect."
+  class="whatsapp-float"
+  target="_blank"
+  title="Chat on WhatsApp"
+>
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+
 </body>
 </html>
