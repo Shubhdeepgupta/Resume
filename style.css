@@ -209,11 +209,29 @@ section {
 
 
 #socials-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
 }
+
+#socials-container .icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#socials-container .icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 
 
 /* ICONS */
@@ -722,29 +740,32 @@ body.dark-mode .whatsapp-float {
 .tech-icons-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .tech-icon {
-  width: 120px;
+  width: 150px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
 }
 
 .tech-icon img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .tech-icon p {
-  margin-top: 0.5rem;
-  font-weight: bold;
+  margin-top: 0.8rem;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 2vw, 1.3rem);
 }
+
 
 .tech-icon:hover {
   transform: scale(1.1);
@@ -908,5 +929,69 @@ body.dark-mode .details-container:hover .icon {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.25s;
+}
+
+
+
+.modal-buttons a {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #333;
+  color: #333;
+  border-radius: 6px;
+  font-weight: 500;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.modal-buttons a:hover {
+  background-color: #f0f0f0; /* light gray on hover */
+  color: #000;
+  border-color: #000;
+}
+
+body.dark-mode .modal-buttons a {
+  border-color: #aaa;
+  color: #eee;
+}
+
+body.dark-mode .modal-buttons a:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* 👇 For tablets and smaller laptops */
+@media (max-width: 992px) {
+  .tech-icons-container {
+    gap: 1.5rem;
+  }
+
+  .tech-icon {
+    width: 100px;
+  }
+
+  .tech-icon img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* 👇 For mobile devices */
+@media (max-width: 576px) {
+  .tech-icons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tech-icon {
+    width: 80px;
+  }
+
+  .tech-icon img {
+    width: 60px;
+    height: 60px;
+  }
+
 }
 

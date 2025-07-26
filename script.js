@@ -7,9 +7,15 @@ function toggleMenu() {
 }
 
 // Show/hide the button on scroll
-window.onscroll = function() {
-  scrollFunction();
-};
+function debounce(func, delay) {
+  let timeout;
+  return function () {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), delay);
+  };
+}
 
 function scrollFunction() {
   const topBtn = document.getElementById("topBtn");
@@ -19,6 +25,10 @@ function scrollFunction() {
     topBtn.style.display = "none";
   }
 }
+
+// Attach debounced scroll handler
+window.addEventListener("scroll", debounce(scrollFunction, 100)); // Run at most every 100ms
+
 
 // Scroll to top when clicked
 function topFunction() {
@@ -106,41 +116,13 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Resume Modal Functions
-function openModal() {
-  document.getElementById("resume-modal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("resume-modal").style.display = "none";
-}
-
-// Close modal if user clicks outside content
-window.addEventListener("click", function (e) {
-  const modal = document.getElementById("resume-modal");
-  if (e.target === modal) {
-    closeModal();
-  }
-});
-
-
-
-// Resume Modal Logic
 function openModal() {
   document.getElementById("resumeModal").style.display = "block";
 }
-
 function closeModal() {
   document.getElementById("resumeModal").style.display = "none";
 }
 
-// Close modal on outside click
-window.onclick = function (event) {
-  const modal = document.getElementById("resumeModal");
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
 
 
 
